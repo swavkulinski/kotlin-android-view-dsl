@@ -8,7 +8,7 @@ Consider following DSL
 
 ```kotlin
     private fun bindView(product:Product,root: View) = 
-            plpWidgetDsl(root){
+            rootWidget(root){
                 title {
                     text(product.title)
                     visibility(View.VISIBLE)
@@ -23,12 +23,12 @@ Calling above will set text on title and price widgets and also ensure title is 
 
 How does it work?
 
-`plpWidgetDsl` is a top level function which bootstraps top level widget class `PlpWidgetDsl`
+`rootWidget` is a top level function which bootstraps root widget class `RootWidget`
 
 Each widget may define many children 
 
 ```kotlin
-class PlpWidgetDsl(root:View) : Widget(root) {
+class RootWidget(root:View) : Widget(root) {
    fun title(init: Title.() -> Unit) = initWidget(Title(root), init)
    fun price(init: Price.() -> Unit) = initWidget(Price(root), init)
 }

@@ -40,13 +40,13 @@ open class TextWidget(root: View) : Widget(root) {
 
 }
 
-class PlpWidgetDsl(root:View) : Widget(root) {
+class RootWidget(root:View) : Widget(root) {
    fun title(init: Title.() -> Unit) = initWidget(Title(root), init)
    fun price(init: Price.() -> Unit) = initWidget(Price(root), init)
 }
 
-fun plpWidgetDsl(root:View, init: PlpWidgetDsl.() -> Unit): PlpWidgetDsl {
-    val plp = PlpWidgetDsl(root)
+fun rootWidget(root:View, init: RootWidget.() -> Unit): RootWidget {
+    val plp = RootWidget(root)
     plp.init()
     return plp
 }

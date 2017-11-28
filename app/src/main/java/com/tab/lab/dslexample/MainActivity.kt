@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun bindView(product:Product,root: View) =
 
-            plpWidgetDsl(root){
+            rootWidget(root){
                 title {
                     text(product.title)
                     visibility(View.VISIBLE)
