@@ -33,6 +33,10 @@ abstract class Widget(val root:View) : Renderable {
          root.visibility = visibility
     }
 
+    fun onClick(onClickListener: (View) -> Unit) {
+        root.setOnClickListener(onClickListener)
+    }
+
 }
 
 open class TextWidget(root: View) : Widget(root) {
