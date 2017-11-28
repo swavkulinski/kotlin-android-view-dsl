@@ -36,6 +36,13 @@ class RootWidget(root:View) : Widget(root) {
 
 As you can see `title` and `price` map to `Title` and `Price` classes respectively
 
+Both classes map to views existing in the 'root' hierarchy
+
+```kotlin
+class Title(root:View) : TextWidget(root.findViewById(R.id.product_name))
+class Price(root:View) : TextWidget(root.findViewById(R.id.product_price))
+```
+
 
 
 
