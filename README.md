@@ -1,7 +1,7 @@
 Android View DSL
 ====
 
-This library allows to change properties of existing view hierarchy using DSL instead of
+This sample show how to change properties of existing view hierarchy using DSL instead of
 particular setters on views.
 
 Consider following DSL
