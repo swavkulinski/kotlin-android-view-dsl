@@ -16,12 +16,9 @@ interface Renderable {
     fun render(root: View)
 }
 
-
-
-
 @WidgetTagMarker
 abstract class Widget(val root:View) : Renderable {
-    val children = arrayListOf<Renderable>()
+    private val children = arrayListOf<Renderable>()
     fun <R:Renderable>initWidget( widget: R, init: R.() -> Unit):R{
         widget.init()
         children.add(widget)

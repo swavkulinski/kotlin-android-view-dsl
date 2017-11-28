@@ -1,13 +1,14 @@
 Android View DSL
 ====
 
-This library allows to change properties of exisiting view hierarchy using DSL instead of
+This library allows to change properties of existing view hierarchy using DSL instead of
 particular setters on views.
 
 Consider following DSL
 
 ```kotlin
-    private fun a(product:Product,root: View) = plpWidgetDsl(root){
+    private fun bindView(product:Product,root: View) = 
+            plpWidgetDsl(root){
                 title {
                     text(product.title)
                     visibility(View.VISIBLE)

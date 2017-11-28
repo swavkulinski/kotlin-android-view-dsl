@@ -9,10 +9,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        a(Product("Banana",price = 3.54),findViewById(android.R.id.content))
+        bindView(Product("Banana",price = 3.54),findViewById(android.R.id.content))
     }
 
-    private fun a(product:Product,root: View) =
+    private fun bindView(product:Product,root: View) =
 
             plpWidgetDsl(root){
                 title {
